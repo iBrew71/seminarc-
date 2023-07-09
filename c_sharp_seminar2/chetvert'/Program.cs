@@ -1,22 +1,19 @@
-﻿// Задача №18. Напишите программу, которая по заданному номеру четверти, показывает
-// диапазон возможных координат точек в этой четверти (x и y).
+﻿/ // Задача №21. Напишите программу, которая принимает на вход координаты двух 
+// точек и находит расстояние между ними в 2D пространстве.
+
+// A (3,6); B (2,1) -> 5,09 
+// A (7,-5); B (1,-1) -> 7,21
+
 
 
 Console.Clear();
-Console.Write("Ведите номер четверти: ");
-int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("x1 = ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("y1 = ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("x2 = ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("y2 = ");
+int y2 = Convert.ToInt32(Console.ReadLine());
 
-while (n < 1 || n > 4)
-{
-    Console.Write("Ведите номер четверти: ");
-    n = Convert.ToInt32(Console.ReadLine());
-}
-
-if (n == 1)
-	Console.WriteLine("x > 0 and y > 0");
-else if (n == 2)
-	Console.WriteLine("x < 0 and y > 0");
-else if (n == 3)
-	Console.WriteLine("x < 0 and y < 0");
-else
-	Console.WriteLine("x > 0 and y < 0");
+Console.WriteLine(Math.Round(Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2)), 3))

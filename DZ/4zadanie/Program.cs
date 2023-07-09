@@ -1,15 +1,22 @@
-﻿// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
-// 5 -> 2, 4
-// 8 -> 2, 4, 6, 8
+﻿// Задача №18. Напишите программу, которая по заданному номеру четверти, показывает
+// диапазон возможных координат точек в этой четверти (x и y).
+
 
 Console.Clear();
-Console.Write("Enter number : ");
-int N = Convert.ToInt32(Console.ReadLine());
-int i = 2;
-if(N<2)
-   Console.Write($"Число не может быть меньше 2 "); 
-while(i <= N)
+Console.Write("Ведите номер четверти: ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+while (n < 1 || n > 4)
 {
-Console.Write($"{i} ");
-i = i + 2;
+    Console.Write("Ведите номер четверти: ");
+    n = Convert.ToInt32(Console.ReadLine());
 }
+
+if (n == 1)
+	Console.WriteLine("x > 0 and y > 0");
+else if (n == 2)
+	Console.WriteLine("x < 0 and y > 0");
+else if (n == 3)
+	Console.WriteLine("x < 0 and y < 0");
+else
+	Console.WriteLine("x > 0 and y < 0");
